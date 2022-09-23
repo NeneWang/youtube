@@ -7,6 +7,11 @@ WORKDIR /app
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 8000
+# EXPOSE 8000
 
-CMD ["uvicorn", "src.main:app", "--host=0.0.0.0", "--reload"]
+# CMD ["uvicorn", "src.main:app", "--host=0.0.0.0", "--reload"]
+
+
+EXPOSE 8080
+CMD [ "main.py" ]
+ENTRYPOINT [ "python" ]
